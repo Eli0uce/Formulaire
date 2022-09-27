@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Lora&display=swap');
+
+.background {
+    margin-top: -3.8em;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+h1 {
+    font: 30px 'Oswald', sans-serif;
+}
+
+h2 {
+    font: 25px 'Oswald', sans-serif;
+}
+
+form {
+    font: 15px 'Lora', sans-serif;
+    font-weight: 400;
+    margin: 4em;
+}
+
+label {
+    line-height: 25px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+select {
+    border-radius: 5px;
+}
+
+p {
+    font-size: 12px;
+}
+
+#submitButton {
+    margin-top: -4em;
+    margin-left: 3.8em;
+}

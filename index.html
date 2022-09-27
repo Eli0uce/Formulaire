@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <img class="background" src="img/background.png" alt="">
+    <form method="get" class="form" name="myForm" onsubmit="return validateForm()">
+        <h1>Formulaire d'inscription :</h1>
+        <div class="form">
+            <label for="name">*Nom : <input type="text" name="name" id="name" class="form-control" placeholder="Nom" autofocus required></label> 
+        </div>
+        <div class="form">
+            <label for="firstname">*Prénom : <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Prénom" required></label>
+        </div>
+        <div class="form">
+            <label for="tel">*Numéro de téléphone : <input type="tel" name="tel" class="form-control" id="tel" min="0" maxlength="6" onkeyup="if(/[a-zA-Z]/g.test(this.value)){this.value = '';}" placeholder="Téléphone" required></label>
+        </div>
+        <div class="form">
+            <label for="email">*Email : <input type="email" name="email" id="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" required></label>
+        </div>
+        <div class="form">
+            <label for="birth">*Date de naissance : <input type="date" name="birth" id="birth" class="form-control" required></label>
+        </div>
+        <h1>Adresse :</h1>
+        <div class="form">
+            <label for="adresse">*Adresse : <input type="text" name="adresse" id="adresse" class="form-control" placeholder="Adresse" required></label>
+        </div>
+        <div class="form">
+            <label for="city">*Commune : <select name="city" id="city" class="form-control">
+                <option value="" disabled selected hidden>Commune</option>
+                <option value="noumea">Nouméa</option>
+                <option value="mont-dore">Mont-Dore</option>
+                <option value="paita">Paita</option>
+                <option value="dumbea">Dumbéa</option>
+                <option value="bourail">Bourail</option>
+                <option value="kone">Koné</option>
+                <option value="boulouparis">Boulouparis</option>
+                <option value="yate">Yaté</option>
+                <option value="canala">Canala</option>
+                <option value="farino">Farino</option>
+                <option value="hienghene">Hienghène</option>
+                <option value="houailou">Houaïlou</option>
+                <option value="kouaoua">Kouaoua</option>
+                <option value="koumac">Koumac</option>
+                <option value="la-foa">La Foa</option>
+                <option value="moindou">Moindou</option>
+                <option value="ouegoa">Ouégoa</option>
+                <option value="poindimie">Poindimié</option>
+                <option value="ponerihouen">Ponérihouen</option>
+                <option value="pouebo">Pouébo</option>
+                <option value="pouembout">Pouembout</option>
+                <option value="poum">Poum</option>
+                <option value="poya">Poya</option>
+                <option value="sarramea">Sarraméa</option>
+                <option value="thio">Thio</option>
+                <option value="touho">Touho</option>
+                <option value="voh">Voh</option>
+            </select></label>
+        </div>
+        <div class="form">
+            <input type="checkbox" name="cgu" id="cgu">
+            <label for="cgu">J'accepte les conditions général d'utilisation</label>
+        </div>
+        <p>* Champs obligatoires</p>
+    </form>
+    <div class="form">
+        <button class="btn btn-primary" id="submitButton" type="submit" value="Envoyer" onclick="Submit()" style="display:none;">Envoyer</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
